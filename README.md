@@ -2,6 +2,12 @@
 
 ## 1. Prerequisite
 
+- Install Golang: https://go.dev/dl/
+
+![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/2c71fd1f-95b1-4740-8877-b0d7ce46998e)
+
+We download the file "**go1.21.6.windows-amd64.msi**" and execute it
+
 - Install and Run **VSCode**
 
 - Load the **Go extension** in VSCode
