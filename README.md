@@ -6,6 +6,8 @@
 
 - Load the **Go extension** in VSCode
 
+  ![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/9b4b5d29-2a7d-47a3-b266-96273e74eb7f)
+
 - Install **Docker Desktop**
 
 - Pull **mongodb docker image** and run it
