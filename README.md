@@ -189,18 +189,67 @@ Now we need to initialize a module with this command. A **main.mod** file will b
 go mod init main
 ```
 
-This is the **main.mod** file contente
+This is the **main.mod** file content
 
 ```
 module yourmodule/bookstore
 
-go 1.16
+go 1.21.6
 
 require (
 	github.com/gorilla/mux v1.8.0
 	go.mongodb.org/mongo-driver v1.7.0
 )
+
+require (
+	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/golang/snappy v0.0.1 // indirect
+	github.com/klauspost/compress v1.9.5 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
+	github.com/xdg-go/scram v1.0.2 // indirect
+	github.com/xdg-go/stringprep v1.0.2 // indirect
+	github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d // indirect
+	golang.org/x/crypto v0.0.0-20200302210943-78000ba7a073 // indirect
+	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
+	golang.org/x/text v0.3.5 // indirect
+)
 ```
 
-## 3. 
+We generate the **go.sum** file with this command
 
+```
+go mod tidy
+```
+
+Now we can run the application
+
+```
+go run main.go
+```
+
+## 3. Test the application with Postman
+
+We send two POST request for creting two books
+
+![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/4e8759bf-2cab-4cd3-bea3-10d517ede47a)
+
+This is the POST request body JSON
+
+```
+{
+    "title": "The Go Programming Language",
+    "author": "Alan A. A. Donovan and Brian W. Kernighan",
+    "isbn": "0134190440"
+}
+```
+
+We verify the database entries running the GET request
+
+![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/ffa78c15-30d4-480c-81da-dea87450d0b2)
+
+## 4. Verify the database with Studio 3T free for MongoDB
+
+We connect to Mongo database with this connection string: mongodb://localhost:27017
+
+![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/415646ee-1d9b-4b0b-951c-6c7464dbaf29)
