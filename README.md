@@ -37,7 +37,9 @@ docker run --name mongodb -d -p 27017:27017 --restart unless-stopped mongo
 
 Create a project directory and open VSCode
 
-Create the main.go file
+Create the **main.go** file
+
+![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/02924aab-9566-427a-97fa-98e0c7e35e4b)
 
 ```
 package main
@@ -179,6 +181,25 @@ func deleteBook(w http.ResponseWriter, r *http.Request) {
 
     w.WriteHeader(http.StatusNoContent)
 }
+```
+
+Now we need to initialize a module with this command. A **main.mod** file will be created
+
+```
+go mod init main
+```
+
+This is the **main.mod** file contente
+
+```
+module yourmodule/bookstore
+
+go 1.16
+
+require (
+	github.com/gorilla/mux v1.8.0
+	go.mongodb.org/mongo-driver v1.7.0
+)
 ```
 
 ## 3. 
