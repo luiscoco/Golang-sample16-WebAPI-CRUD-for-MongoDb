@@ -24,7 +24,7 @@ We run the mongo docker container
 docker run --name mongodb -d -p 27017:27017 --restart unless-stopped mongo
 ```
 
-![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/60d27a6f-edbb-4116-90c3-3ac8346fd813
+![image](https://github.com/luiscoco/Golang-sample16-WebAPI-CRUD-for-MongoDb/assets/32194879/60d27a6f-edbb-4116-90c3-3ac8346fd813)
 
 - Verify the image and container in **Docker Desktop**
 
